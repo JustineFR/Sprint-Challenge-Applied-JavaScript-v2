@@ -15,10 +15,10 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
 
 
 .then((response) => {
-    console.log('response: ', response)
+    // console.log('response: ', response)
 
     const items = response.data.topics
-    console.log(items)
+    // console.log(items)
 
     items.forEach(topic => {
         const tab = document.createElement('div')
