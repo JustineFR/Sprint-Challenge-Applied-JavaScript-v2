@@ -25,7 +25,10 @@ function Header() {
     headerDate.classList.add('date')
     headerTemp.classList.add('temp')
 
-    
+    // add Content
+    headerDate.textContent = 'MARCH 28, 2019'
+    headerTitle.textContent = 'Lambda Times'
+    headerTemp.textContent = '98°'
 
 
 
