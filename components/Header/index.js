@@ -37,9 +37,7 @@ function header() {
     header.appendChild(headerTemp);
 
 
-
-
     return header
-
-
 }
+
+header()
