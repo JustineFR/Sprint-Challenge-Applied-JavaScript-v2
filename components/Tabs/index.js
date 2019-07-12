@@ -13,16 +13,17 @@ const topics = document.querySelector('.topics')
 
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
 
+
 .then((response) => {
-    console.log('response: ', response.data.topics)
+    console.log('response: ', response)
 
     const items = response.data.topics
     console.log(items)
 
-    items.forEach(topic => {
+    items.map(topic => {
         const tab = document.createElement('div')
         tab.classList.add('tab')
-        tab.textContent = items[topic]
+        tab.textContent = topic
         topics.appendChild(tab)
 
     });
@@ -33,43 +34,3 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
     console.log('ERROR: ', error)
   })
 
-
-
-
-
-
-// function createTabs(data) {
-
-//     // create elements
-//     const tab1 = document.createElement('div')
-//     const tab2 = document.createElement('div')
-//     const tab3 = document.createElement('div')
-//     const tab4 = document.createElement('div')
-//     const tab5 = document.createElement('div')
-
-//     // add classes
-//     tab1.classList.add('tab')
-//     tab2.classList.add('tab')
-//     tab3.classList.add('tab')
-//     tab4.classList.add('tab')
-//     tab5.classList.add('tab')
-
-//     // Add content
-//     tab1.textContent = data.topics[0]
-//     tab2.textContent = data.topics[1]
-//     tab3.textContent = data.topics[2]
-//     tab4.textContent = data.topics[3]
-//     tab5.textContent = data.topics[4]
-
-//     // Append
-//     topics.appendChild(tab1)
-//     topics.appendChild(tab2)
-//     topics.appendChild(tab3)
-//     topics.appendChild(tab4)
-//     topics.appendChild(tab5)
-
- 
-
-//   }
-
-//   createTabs()
