@@ -16,10 +16,16 @@ const headerContainer = document.querySelector('.header-container')
 function Header() {
     // Creating the elements
     const header = document.createElement('div')
-    const date = document.createElement('span')
-    const title = document.createElement('h1')
-    const temp = document.createElement('span')
+    const headerDate = document.createElement('span')
+    const headerTitle = document.createElement('h1')
+    const headerTemp = document.createElement('span')
 
+    // set classes
+    header.classList.add('header')
+    headerDate.classList.add('date')
+    headerTemp.classList.add('temp')
+
+    
 
 
 
