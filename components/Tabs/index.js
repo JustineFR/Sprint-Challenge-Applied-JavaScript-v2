@@ -20,7 +20,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
     const items = response.data.topics
     console.log(items)
 
-    items.map(topic => {
+    items.forEach(topic => {
         const tab = document.createElement('div')
         tab.classList.add('tab')
         tab.textContent = topic
